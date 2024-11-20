@@ -1,0 +1,8 @@
+#pysqlite3-binary
+llama-hub==0.0.64
+llama-index==0.9.22
+SQLAlchemy==2.0.23
+streamlit==1.29.0
+openai==1.6.0
+pandas==2.1.4
+chromadb==0.4.21
