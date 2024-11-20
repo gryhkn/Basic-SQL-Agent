@@ -9,12 +9,15 @@ from llama_index import SQLDatabase
 from llama_index.llms import OpenAI
 from llama_index.indices.struct_store import NLSQLTableQueryEngine
 import openai
+import os
+from dotenv import load_dotenv
 
+load_dotenv() 
 # OpenAI setup
-openai.api_key = "sk-"
+openai.api_key = os.environ["OPENAI_API_KEY"]
 
 
-llm = OpenAI(temperature=0, model="gpt-4o", streaming=True)
+llm = OpenAI(temperature=0, model="gpt-4", streaming=True)
 
 def create_streamlit_ui():
     st.set_page_config(
